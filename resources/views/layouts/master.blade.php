@@ -11,6 +11,8 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/select2-bootstrap4.min.css') }}">
 
 
     @stack('head')
@@ -76,10 +78,15 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('js/select2.min.js') }}"></script>
 
     @stack('scripts-include')
     <script>
         (function() {
+            $('.select2-default').select2({
+                theme: 'bootstrap4',
+            })
+
             @stack('scripts')
         })()
     </script>

@@ -13,6 +13,24 @@
                     <p>CUSTOMER</p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('item.index') }}" class="nav-link">
+                    <i class="fas fa-user nav-icon"></i>
+                    <p>ITEM</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('category.index') }}" class="nav-link">
+                    <i class="fas fa-user nav-icon"></i>
+                    <p>CATEGORY</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('salesman.index') }}" class="nav-link">
+                    <i class="fas fa-user nav-icon"></i>
+                    <p>SALESMAN</p>
+                </a>
+            </li>
         </ul>
     </ul>
 @else

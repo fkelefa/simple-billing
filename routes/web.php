@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\SalesmanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +24,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::middleware(['auth'])->group(function () {
     Route::get('home', [HomeController::class, 'index']);
     Route::resource('customer', CustomerController::class);
+    Route::resource('item', ItemController::class);
+    Route::resource('category', CategoryController::class);
+    Route::resource('salesman', SalesmanController::class);
 });
