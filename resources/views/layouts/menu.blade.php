@@ -31,6 +31,12 @@
                     <p>SALESMAN</p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('bill.index') }}" class="nav-link">
+                    <i class="fas fa-user nav-icon"></i>
+                    <p>BILL</p>
+                </a>
+            </li>
         </ul>
     </ul>
 @else

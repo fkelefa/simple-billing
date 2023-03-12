@@ -43,16 +43,13 @@ class CategoryController extends Controller
             'code' => $request['code'],
             'name' => $request['name'],
         ]);
-
         return redirect()->back();
     }
 
     public function destroy($id)
     {
-
         $resource = Category::find($id);
         $resource->delete();
-
         return redirect()->route('category.index');
     }
 }

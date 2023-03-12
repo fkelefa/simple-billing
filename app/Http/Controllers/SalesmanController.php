@@ -51,10 +51,8 @@ class SalesmanController extends Controller
 
     public function destroy($id)
     {
-
         $resource = Salesman::find($id);
         $resource->delete();
-
         return redirect()->route('salesman.index');
     }
 }

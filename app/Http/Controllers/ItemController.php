@@ -39,6 +39,8 @@ class ItemController extends Controller
     {
         $data = [];
         $data['resource'] = Item::find($id);
+        $data['category_codes'] = Category::pluck('code', 'code')->toArray();
+
         return view('item.edit', $data);
     }
 
@@ -58,10 +60,8 @@ class ItemController extends Controller
 
     public function destroy($id)
     {
-
         $resource = Item::find($id);
         $resource->delete();
-
         return redirect()->route('item.index');
     }
 }

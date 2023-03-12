@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BillController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -7,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\SalesmanController;
+use App\Http\Controllers\UtilityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +29,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('item', ItemController::class);
     Route::resource('category', CategoryController::class);
     Route::resource('salesman', SalesmanController::class);
+    Route::resource('bill', BillController::class);
+
+    // Utility Controller
+    Route::post('select/customer', [UtilityController::class, 'selectCustomer'])->name('utility.select.customer');
+    Route::post('select/item', [UtilityController::class, 'selectItem'])->name('utility.select.item');
 });

@@ -5,7 +5,7 @@
                 {!! Form::label('code', 'Code', ['class' => 'col-form-label']) !!}
             </div>
             <div class="col-9">
-                {!! Form::text('code', null, ['class' => 'form-control']) !!}
+                {!! Form::text('code', null, ['class' => 'form-control', 'required']) !!}
             </div>
         </div>
         <div class="form-group row">
@@ -13,7 +13,7 @@
                 {!! Form::label('name', 'Name', ['class' => 'col-form-label']) !!}
             </div>
             <div class="col-9">
-                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'required']) !!}
             </div>
         </div>
         <div class="form-group">

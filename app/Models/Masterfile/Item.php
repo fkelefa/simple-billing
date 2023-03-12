@@ -18,4 +18,13 @@ class Item extends Model
         'price',
         'description',
     ];
+
+    protected $appends = [
+        'detail'
+    ];
+
+    public function getDetailAttribute()
+    {
+        return "{$this->code} - {$this->name}";
+    }
 }
